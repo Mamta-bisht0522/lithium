@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();///test-you
 //importing a custom module
-const xyz = require('./logger')
+const xyz = require('../logger')
 const abc =require('../logger/logger.js')
 const pqr=require('../util/helper.js')
 const tmt=require('../util/helper.js')
