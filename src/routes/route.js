@@ -67,46 +67,47 @@ router.post("/test-post-4", function(req, res) {
     let arr= [ 12, "functionup"]
     let ele= req.body.element
     arr.push(ele)
-    res.send(  { msg: arr , status: true }  )
+    res.send({ msg: arr , status: true })
 })
 
 
-//    router.post('/players', function (req, res) {
-//     let players =
-//                 [{
-//             "name": "manish",
-//             "dob": "1/1/1995",
-//             "gender": "male",
-//             "city": "jalandhar",
-//             "sports": [
-//                 "swimming"
-//             ]
-//         },
-//         {
-//             "name": "gopal",
-//             "dob": "1/09/1995",
-//             "gender": "male",
-//             "city": "delhi",
-//             "sports": [
-//                 "soccer"
-//             ]
-//         },
-//         {
-//             "name": "lokesh",
-//             "dob": "1/1/1990",
-//             "gender": "male",
-//             "city": "mumbai",
-//             "dob": "1/09/1995",
-//            "gender": "male",
-//            "city": "delhi",
-//            "sports": "soccer"
-//         }];
-       
-//     let ele= req.body.element
-//     players.push(ele)
-//     res.send(  { data: players , status: true }  )
-//    })
-
-
+let players =
+   [
+       {
+           "name": "manish",
+           "dob": "1/1/1995",
+           "gender": "male",
+           "city": "jalandhar",
+           "sports": [
+               "swimming"
+           ]
+       },
+       {
+           "name": "gopal",
+           "dob": "1/09/1995",
+           "gender": "male",
+           "city": "delhi",
+           "sports": [
+               "soccer"
+           ]
+       },
+       {
+           "name": "lokesh",
+           "dob": "1/1/1990",
+           "gender": "male",
+           "city": "mumbai",
+           "sports": [
+               "soccer"
+           ]
+       },
+   ]
+ 
+   router.post('/players', function (req, res) {
+ let elem=req.body;
+ players.push(elem);
+ console.log(players)
+    res.send(  { data: players , status: true }  )
+      
+   })   
 
 module.exports = router;
