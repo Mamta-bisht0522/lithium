@@ -35,6 +35,9 @@ const getRandomBooks=async function(req,res){
 
 
 
+// /let auther= autherModel.findOne({autherName:ravindra})
+
+
 
 module.exports.getParticularBooks=getParticularBooks
 // module.exports.getXINRBooks=getXINRBooks
