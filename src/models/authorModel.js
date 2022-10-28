@@ -1,8 +1,10 @@
-const mongoose=require('mongoose')
-const autherSchema=new mongoose.Schema({
-        author_id:Number,
+ const mongoose=require('mongoose')
+const authorSchema=new mongoose.Schema({
         author_name:String,
         age:Number,
         address:String
+
 },{timestamps:true})
-module.exports=mongoose.model('Auther',autherSchema)
+module.exports=mongoose.model('Author',authorSchema)
+
+ 
