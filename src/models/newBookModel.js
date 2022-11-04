@@ -11,7 +11,11 @@ const LibryBookSchema = new mongoose.Schema( {
         ref: "Publisher"
     }, 
     price: Number,
-    ratings: Number
+    ratings: Number,
+    isHardCover:{
+        type:Boolean,
+        default:false
+    }
 }, { timestamps: true });
 
 module.exports = mongoose.model('LibryBook', LibryBookSchema)

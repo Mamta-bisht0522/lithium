@@ -9,7 +9,7 @@ const newPublisherController=require("../controllers/newPublisherController")
 const newBookModel=require("../models/newBookModel")
 const newAuthorModel=require("../models/newAuthorModel")
 const newPublisherModel=require("../models/newPublisherModel")
-const putNewKey=require("../controllers/put")
+
 router.get("/test-me", function (req, res) {
     res.send("My first ever api!")
 })
@@ -24,7 +24,9 @@ router.post("/createNewBook",newBookController.createNewBook  )
 router.post("/createNewauthor",newAuthorController.CreateAuthor  )
 router.post("/createNewPublisher",newPublisherController.createPublisher  )
 router.get("/booksAuthorPubliser",newBookController.booksAuthorPubliser)
-router.get("/bookAuthorPubPrsnt", newBookController.bookAuthorPubPrsnt)
-// router.get("/putNewKey",putNewKey.putNewKey)
+router.post("/bookAuthorPubPrsnt", newBookController.bookAuthorPubPrsnt)
+router.put("/newBooksAuthorPubliser", newBookController.newBooksAuthorPubliser)
+//router.put("/newBooksAuthorPubliser1", newBookController.newBooksAuthorPubliser1)
+
 
 module.exports = router;
