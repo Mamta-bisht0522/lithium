@@ -2,7 +2,8 @@ const jwt = require("jsonwebtoken");
 const userModel = require("../models/userModel");
 
 /*
-  Read all the comments multiple times to understand why we are doing what we are doing in login api and getUserData api
+  Read all the comments multiple times to understand why we are doing what we are doing in login
+  api and getUserData api
 */
 const createUser = async function (abcd, xyz) {
   //You can name the req, res objects anything.
@@ -29,7 +30,8 @@ const loginUser = async function (req, res) {
   // Sign function has 2 inputs:
   // Input 1 is the payload or the object containing data to be set in token
   // The decision about what data to put in token depends on the business requirement
-  // Input 2 is the secret (This is basically a fixed value only set at the server. This value should be hard to guess)
+  // Input 2 is the secret (This is basically a fixed value only set at the server. 
+  // This value should be hard to guess)
   // The same secret will be used to decode tokens 
   let token = jwt.sign(
     {
